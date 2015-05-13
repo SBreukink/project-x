@@ -1,0 +1,210 @@
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+#wrapper.toggled .navbar    {
+    left: 250px;
+}
+
+/* Off-Canvas Sidebar Menu */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav hr {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a.nav-current {
+    font-weight: bold;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+
+.sidebar-nav-bottom {
+    bottom: 0;
+    position: absolute;
+    list-style: none;
+    background: white;
+    width: 250px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar-nav-bottom li {
+    display: inline-block;
+}
+
+/* Navigation Bar Styles */
+
+.navbar {
+    margin-bottom: 60px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.navbar-toggle  {
+    float: left;
+    border: none;
+    margin-left: 15px;
+    z-index: 99;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:hover,
+.navbar-toggle:active,    {
+    background: none;
+}
+
+.navbar-brand   {
+    text-align: center;
+    width: 100vw;
+    position: absolute;
+    margin-left: -52px;
+    z-index: 10;
+}
+
+/* Homescreen Styles */
+
+.card   {
+    margin-top: 1em;
+    padding: 1em;
+    background: white;
+    border: 1px solid gray;
+    border-radius: -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 99;
+}
+
+.welcome {
+    margin-top: 52px;
+    background: red;
+}
+
+.card-weather h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.card-weather ul {
+    height: 100%;
+}
+
+.card-programma {
+
+}
+
+.card-behind {
+
+}
+
+.card-photos {
+    overflow: hidden;
+}
+
+.square-photo {
+    max-height: 300px;
+    overflow: hidden;
+    margin-left:-1em;
+    margin-right:-1em;
+    position: relative;
+}
+
+.card-photos img {
+    width: auto;
+    height: 100%;
+
+}
+
+.card-photos img.portrait {
+    width: 100%;
+    height: auto;
+}
