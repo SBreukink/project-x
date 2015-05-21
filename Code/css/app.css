@@ -166,7 +166,7 @@
 
 .welcome {
     margin-top: 52px;
-    background: red;
+    background: white;
 }
 
 .card-weather h1 {
@@ -179,15 +179,35 @@
 }
 
 .card-programma {
-
+    background: white;
+    z-index: 99;
 }
 
 .card-behind {
+    min-height: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background: gray;
+    z-index: 0;
+}
 
+.card-behind .circle-symbol {
+    width: 80px;
+    height: 80px;
+    background: white;
+    font-style: italic;
+    font-size: 20pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
 }
 
 .card-photos {
     overflow: hidden;
+    background: white;
+    z-index: 99;
 }
 
 .square-photo {
@@ -207,4 +227,25 @@
 .card-photos img.portrait {
     width: 100%;
     height: auto;
+}
+
+
+/* KAART */
+
+#map-canvas,
+#map-search {
+    width: 100vw;
+    height: 100vh;
+}
+
+#map-search {
+    visibility: hidden;
+}
+
+#map-search:target  {
+    visibility: visible;
+}
+
+#map-search:target #map-canvas  {
+    visibility: hidden;
 }

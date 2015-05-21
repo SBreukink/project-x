@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="SSRE App Homescreen">
+    <meta name="description" content="SSRE App Kaart">
     <meta name="author" content="SSRE WebCie">
     <!-- Favicons -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -16,13 +16,15 @@
     <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
 
-    <title>Homescreen</title>
+    <title>Kaart</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet"> <!-- non-minified version for development, use .min.js for final release -->
 
     <!-- Custom CSS -->
     <link href="css/app.css" rel="stylesheet">
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,17 +43,17 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <a href="#" class="nav-current"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
                 </li>
                 <li>
                     <a href="programma.html"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Programma</a>
                 </li>
                 <li>
-                    <a href="ssre.html"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Over SSRE</a>
+                    <a href="ssre.html" ><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Over SSRE</a>
                 </li>
                 <hr>
                 <li>
-                    <a href="kaart.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Kaart</a>
+                    <a href="#" class="nav-current"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Kaart</a>
                 </li>
                 <li>
                     <a href="fotos.html"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Foto&rsquo;s</a>
@@ -90,89 +92,34 @@
                              <span class="navbar-brand">I <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> SSRE</span>
                         </div>
 
-
                       </div><!-- /.container-fluid -->
                     </nav>
-                </div>
 
-                <div class="row welcome">
-                    <div class="col-md-12">
-                        <h1>Welkom terug!</h1>
-                    </div>
-                </div>
+                    <div id="map">
+                            <div class="row">
+                                <h1>Van de kaart</h1>
+                            </div>
+                            <div id="map-canvas">
+                            </div>
+                            <div class="row card">
+                                <a href="#map-search">
+                                    <div class="col-md-12">
+                                        <span class="button-icon-right glyphicon glyphicon-search"></span>
+                                       Waar wil je naartoe?
+                                    </div>
+                                </a>
+                            </div>
 
-                <div class="row card card-weather">
-                    <div class="col-xs-6">
-                        <h1>19:10</h1>
-                    </div>
-                    <div class="col-xs-3">
-                        <ul>
-                            <li class="weather-temperature">19&deg;C</li>
-                            <li>Bewolkt</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-3">
-                        <object type="image/svg+xml" data="img/weather-cloudy.svg" width="64" height="64"></object>
-                    </div>
-                </div>
+                        </div>
 
-                <div class="row card">
-                    <div class="col-md-12">
-                        <h1 class="card-title">Komende activiteit</h1>
-                        <p>Collectief comazuipen</p>
-                        <span class="light"><p>over 50 minuten</p></span>
-                        <span class="small-bold"><p>Locatie: SSRE</p></span>
-                        <a class="btn btn-dark">Meer info <span class="button-icon-right">&#10140;</span></a>
-                    </div>
+                        <div id="map-search">
+                            <div class="row card">
+                                <input type="text" data-provide="typeahead">
+                            </div>
+                        </div>
                 </div>
 
                 
-
-                <div id="above" class="row card card-programma">
-                    <a href="programma.html">
-                        <div class="col-md-12">
-                            <span class="button-icon-left glyphicon glyphicon-calendar"></span>
-                            Volledig programma
-                        </div>
-                    </a>
-                </div>
-
-                <div id="below" class="row card-behind">
-                    <div class="col-md-12">
-                        <div class="circle-symbol">i</div>
-                        <p class="behind-text">Twee bier in de handen, eentje tussen de tanden!</p>
-                        <!-- <button>Display height</button> -->
-                    </div>
-                </div>
-
-                <div id="bottom" class="row card card-photos">
-                    <h1 class="card-title card-title-centered">Recente foto&rsquo;s</h1>
-                    <div class="square-photo"><img src="img/stadscantus.jpg"></div>  
-                    <a class="btn btn-dark"><span class="glyphicon glyphicon-picture button-icon-left"></span> Alle foto&rsquo;s</a>
-                </div>
-
-                <div class="row card card-twitter">
-                    <div class="col-md-12">
-                        <h1 class="card-title card-title-twitter">Deel jouw #NED</h1>
-                        <p>Erhmahgerd, net m&rsquo;n eerste biertje op #gaaf #yoleau #NED</p>
-                        <div class="social-author">
-                            <img src="" />
-                            <ul>
-                                <li class="author">@kiddo</li>
-                                <li class="post-time">50 minuten geleden</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row card-behind final-card">
-                    <a href="#">
-                        <div class="col-md-12">
-                            <div class="circle-symbol"></div>
-                            <p class="behind-text">naar boven</p>
-                        </div>
-                    </a>
-                </div>
 
             </div> <!-- /.container-fluid -->
         </div> <!-- /#page-content-wrapper -->
@@ -185,6 +132,30 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap 3 TypeAhead Plugin -->
+    <script src="js/bootstrap3-typeahead.min.js"></script>
+    <script>
+        $('.typeahead').typeahead();
+        $.get('poi.json', function(data){
+            $(".typeahead").typeahead({ source:data });
+        },'json');
+    </script>
+
+    <!-- Load Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
     <!-- Menu Toggle Script -->
     <script>
