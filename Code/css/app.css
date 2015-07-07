@@ -1,6 +1,9 @@
 
-/* Toggle Styles */
+/* Toggle Styles 
+The settings under here are for the sidebar
+*/
 
+/* Sidebar before extended */
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -9,10 +12,12 @@
     transition: all 0.5s ease;
 }
 
+/* New padding when extended */
 #wrapper.toggled {
     padding-left: 250px;
 }
 
+/* Sidebar when extended */
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
@@ -21,7 +26,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: #FF0000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -75,12 +80,12 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #fff;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     background: rgba(255,255,255,0.2);
 }
 
@@ -109,11 +114,20 @@
     bottom: 0;
     position: absolute;
     list-style: none;
-    background: white;
+    background: #FF0000;
+    color: #fff;
     width: 250px;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.sidebar-nav-bottom li a {
+    color: #fff;
+}
+
+.sidebar-nav-bottom li a:hover {
+    color: #000;
 }
 
 .sidebar-nav-bottom li {
